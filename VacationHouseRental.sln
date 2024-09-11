@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VacationHouseRental", "VacationHouseRental\VacationHouseRental.csproj", "{F83EC052-E4D6-4C9A-8A97-EA4578E5D358}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VacationHouseRental.Client", "VacationHouseRental.Client\VacationHouseRental.Client.csproj", "{727C3535-BC6B-499C-BB4D-55AB352FE733}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F83EC052-E4D6-4C9A-8A97-EA4578E5D358}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F83EC052-E4D6-4C9A-8A97-EA4578E5D358}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F83EC052-E4D6-4C9A-8A97-EA4578E5D358}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F83EC052-E4D6-4C9A-8A97-EA4578E5D358}.Release|Any CPU.Build.0 = Release|Any CPU
+		{727C3535-BC6B-499C-BB4D-55AB352FE733}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{727C3535-BC6B-499C-BB4D-55AB352FE733}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{727C3535-BC6B-499C-BB4D-55AB352FE733}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{727C3535-BC6B-499C-BB4D-55AB352FE733}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3039FE58-97E7-4FF7-A943-F8D0604128BA}
+	EndGlobalSection
+EndGlobal
