@@ -7,12 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\aos\**" />
+    <Content Remove="wwwroot\aos\**" />
+    <EmbeddedResource Remove="wwwroot\aos\**" />
+    <None Remove="wwwroot\aos\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\VacationHouseRental.Client\VacationHouseRental.Client.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.8" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\images\18B\" />
+    <Folder Include="wwwroot\images\Dth\" />
+    <Folder Include="wwwroot\images\Nt\" />
   </ItemGroup>
 
 </Project>

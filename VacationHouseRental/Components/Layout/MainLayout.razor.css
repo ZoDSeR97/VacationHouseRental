@@ -1,7 +1,6 @@
 .page {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     position: relative;
 }
 
@@ -31,6 +30,30 @@ main {
     .top-row {
         padding: 0 1rem;
     }
+}
+
+@media (max-width: 375px) {
+    .top-row {
+        padding: 0 0.5rem;
+        font-size: 0.875rem;
+    }
+
+    main {
+        padding: 0.5rem;
+    }
+
+    .nav-menu {
+        font-size: 0.875rem;
+    }
+
+    #blazor-error-ui {
+        padding: 0.5rem 1rem;
+    }
+
+        #blazor-error-ui .dismiss {
+            top: 0.3rem;
+            right: 0.5rem;
+        }
 }
 
 #blazor-error-ui {

@@ -13,6 +13,7 @@
     background-image: url('images/hero-image.webp');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     height: 100vh;
 }
 
@@ -55,6 +56,7 @@
     color: white;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     height: 100vh;
 }
 
@@ -122,3 +124,72 @@ ul {
         cursor: pointer;
         text-decoration: none;
     }
+
+@media (max-width: 375px) {
+    .hero-section {
+        height: 80vh;
+        background-size: contain;
+        background-position: center top;
+    }
+
+    .hero-text {
+        top: 15%;
+    }
+
+        .hero-text h1 {
+            font-size: 1.5em;
+        }
+
+        .hero-text p {
+            font-size: 0.8em;
+        }
+
+    .cta-button {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+
+    .section {
+        height: auto;
+        padding: 0.8rem;
+    }
+
+        .section h2 {
+            font-size: 1.1em;
+            margin-bottom: 12px;
+        }
+
+    ul li {
+        font-size: 0.9em;
+    }
+
+    .testimonial {
+        padding: 12px;
+        margin: 12px auto;
+        max-width: 90%;
+    }
+
+        .testimonial p {
+            font-size: 0.8em;
+        }
+
+    .booking-section .cta-button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    .content-section {
+        padding: 0.8rem;
+    }
+
+    .cta-button {
+        font-size: 0.8em;
+        padding: 8px 16px;
+        margin-bottom: 0.8rem;
+    }
+
+    .testimonial, .property-highlights, .guest-testimonials, .local-attractions {
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}

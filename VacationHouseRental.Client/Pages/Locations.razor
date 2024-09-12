@@ -1,7 +1,98 @@
 ﻿@page "/locations"
+@rendermode InteractiveAuto
 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
+<div class="bg-image text-white" style="background-image: url('images/hero-image.webp'); background-size: cover; background-position: center; min-height: 100vh; padding: 3rem;">
+    <h1 class="text-center my-4">Explore Our Rental Locations</h1>
+
+    <div class="container">
+        <div class="row">
+            @foreach (var location in RentalLocations)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div id="carousel-@location.Id" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                @foreach (var image in location.Images)
+                                {
+                                    <div class="carousel-item @(image == location.Images.First() ? "active" : "")">
+                                        <img src="@image" class="img-fluid img-thumbnail" alt="@location.Name">
+                                    </div>
+                                }
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-@location.Id" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-@location.Id" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">@location.Name</h5>
+                            <h5 class="card-title">@location.Features</h5>
+                            <a class="btn btn-primary" href="@location.ExternalLink" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
 
 @code {
+    public class RentalLocation
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Features { get; set; }
+        public List<string> Images { get; set; }
+        public string ExternalLink { get; set; }
+    }
 
+    private List<RentalLocation> RentalLocations = new List<RentalLocation>
+    {
+        new RentalLocation
+        {
+            Id = 1,
+            Name = "263/3 nguyen trai, ward nguyen cu trinh, q.1",
+            Features = "5 br + 5 bathroom",
+            Images = new List<string>
+            {
+                "images/Nt/0.jpg",
+                "images/Nt/1.jpg",
+                "images/Nt/2.jpg"
+            },
+            ExternalLink = "https://www.airbnb.com/slink/J7iky5XY"
+        },
+        new RentalLocation
+        {
+            Id = 2,
+            Name = "16/7 dinh tien hoang, ward dakao,q.1",
+            Features = "6 br + 6 bathroom",
+            Images = new List<string>
+            {
+                "images/Dth/0.jpg",
+                "images/Dth/1.jpg",
+                "images/Dth/2.jpg"
+            },
+            ExternalLink = "https://www.airbnb.com/slink/O5WCUk1V"
+        },
+        new RentalLocation
+        {
+            Id = 3,
+            Name = "18b dien bien phu, ward dakao,q.1",
+            Features = "5 br + 4 bathroom",
+            Images = new List<string>
+            {
+                "images/18B/0.jpg",
+                "images/18B/1.jpg",
+                "images/18B/2.jpg"
+            },
+            ExternalLink = "https://www.airbnb.com/slink/dbNHjPk8"
+        }
+    };
 }
